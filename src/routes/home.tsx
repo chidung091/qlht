@@ -1,4 +1,4 @@
-import { Button, Col, Row } from "react-bootstrap";
+import { Badge, Button, Col, Form, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap"
 export default function Home() {
@@ -14,10 +14,23 @@ export default function Home() {
                 ></Image>
             </Col>
             <Col sm={5}>
-                <h1>Bạn có muốn chửi ai chưa?</h1>
-                <Row className="m-auto">
-                    <Col><Button variant="secondary">Địt mẹ con Hảo</Button></Col>
-                    <Col><Button variant="primary">Địt mẹ con Hạnh</Button></Col>
+            <Stack direction="vertical" gap={3}>
+  <Form.Control className="me-auto" placeholder="Nhập sản phẩm cần tìm..." />
+  <Button variant="secondary">Tìm kiếm</Button>
+</Stack>
+                <Row className="my-5">
+                  <h1>Chính sách cửa hàng</h1>
+                  <Col>
+                  <p className="pb-2">
+                  <Badge bg="secondary">New</Badge> Tích điểm trên mỗi giao dịch
+                  </p>
+                  <p className="pb-2">
+                  <Badge bg="secondary">New</Badge> Sản phẩm được bán là sản phẩm chính hãng có nguồn gốc xuất sứ rõ ràng 
+                  </p>
+                  <p className="pb-2">
+                  <Badge bg="secondary">New</Badge> Giá thành tốt nhất trong các hệ thống
+                  </p>
+                  </Col>
                 </Row>
             </Col>
         </Row>
